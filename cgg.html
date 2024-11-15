@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linktree Style Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Custom Font -->
+  <style>
+    /* General reset and styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif; /* Custom Font */
+      scroll-behavior: smooth; /* Smooth scrolling */
+    }
+    body {
+      background: linear-gradient(135deg, #282c34, #61dafb); /* Gradient Background */
+      color: var(--text-color, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s; /* Transition for theme change */
+    }
+    .container {
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      animation: popIn 1s ease-in-out; /* Container animation */
+    }
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 20px auto;
+      border: 3px solid #61dafb;
+      animation: bounce 2s infinite; /* Profile picture animation */
+    }
+    .profile-name {
+      font-size: 1.8em;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #61dafb;
+      animation: slideIn 1s ease-out; /* Text animation */
+    }
+    .profile-info {
+      font-size: 1em;
+      color: #a9a9a9;
+      margin: 10px 0 25px 0;
+      line-height: 1.4;
+      animation: slideIn 1s ease-out; /* Text animation */
+    }
+    .link-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #444;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 24px;
+      margin: 12px 0;
+      border-radius: 12px;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      animation: fadeIn 1s ease-in-out; /* Button animation */
+    }
+    .link-btn:hover {
+      background: #555;
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+    .link-btn .icon {
+      margin-right: 12px;
+      font-size: 1.2em;
+      transition: transform 0.3s; /* Animation */
+    }
+    .link-btn:hover .icon {
+      transform: scale(1.2); /* Icon Animation */
+    }
+    .linktree-footer {
+      font-size: 0.9em;
+      margin-top: 30px;
+      color: #888;
+    }
+    .linktree-footer a {
+      color: #888;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .linktree-footer a:hover {
+      color: #fff;
+    }
+    .theme-toggle {
+      cursor: pointer;
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #888;
+      transition: color 0.3s;
+    }
+    .theme-toggle:hover {
+      color: #00ccff;
+    }
+
+    /* Keyframes for animations */
+    @keyframes popIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
+    @keyframes slideIn {
+      from { transform: translateX(-100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="s.jpg" class="profile-pic" alt="Profile Picture">
+    <div class="profile-name">SAYEM X ZRP</div>
+    <div class="profile-info">15 / Your Description or Tagline</div>
+    
+    <!-- Links with Font Awesome icons -->
+    <a href="your-resume-url.pdf" class="link-btn">
+      <span class="icon"><i class="fas fa-file-alt"></i></span> CV
+    </a>
+    <a href="https://twitter.com/yourusername" class="link-btn">
+      <span class="icon"><i class="fab fa-twitter"></i></span> Twitter
+    </a>
+    <a href="https://github.com/yourusername" class="link-btn">
+      <span class="icon"><i class="fab fa-github"></i></span> GitHub
+    </a>
+    <a href="https://linkedin.com/in/yourusername" class="link-btn">
+      <span class="icon"><i class="fab fa-linkedin"></i></span> LinkedIn
+    </a>
+    <a href="https://instagram.com/yourusername" class="link-btn">
+      <span class="icon"><i class="fab fa-instagram"></i></span> Instagram
+    </a>
+    <a href="https://youtube.com/@yourusername" class="link-btn">
+      <span class="icon"><i class="fab fa-youtube"></i></span> YouTube
+    </a>
+    <a href="https://sayemxzrp.blogspot.com" class="link-btn">
+      <span class="icon"><i class="fas fa-globe"></i></span> MY Website
+    </a>
+    <a href="https://facebook.com/sayemxzrp1" class="link-btn">
+      <span class="icon"><i class="fab fa-facebook"></i></span> Facebook
+    </a>
+
+    <!-- Footer -->
+    <div class="linktree-footer">
+      <a href="https://linktr.ee/yourusername">* Join me on Linktree</a>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" onclick="toggleTheme()">
+      <i class="fas fa-adjust"></i> Toggle Theme
+    </div>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const currentBgColor = getComputedStyle(document.body).getPropertyValue('--bg-color').trim();
+      if (currentBgColor === '#282c34') {
+        document.body.style.setProperty('--bg-color', '#ffffff');
+        document.body.style.setProperty('--text-color', '#000000');
+      } else {
+        document.body.style.setProperty('--bg-color', '#282c34');
+        document.body.style.setProperty('--text-color', '#ffffff');
+      }
+    }
+  </script>
+</body>
+</html>
